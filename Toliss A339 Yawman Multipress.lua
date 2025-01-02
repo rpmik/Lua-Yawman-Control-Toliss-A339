@@ -1,7 +1,7 @@
 --[[
  Toliss A339 mapping for the Yawman Arrow By Ryan Mikulovsky, CC0 1.0. 
  
- Initial commit: 2025-1-2
+ Initial commit: 2024-12-22
  
  Inspired by Yawman's mapping for the MSFS PMDG 777.
  Thanks for Thomas Nield for suggesting looking into Lua for better controller support in XP12. Button numbers and their variable names came from Thomas.
@@ -171,7 +171,7 @@ function multipressTolissA339_buttons()
 			set_button_assignment(POV_DOWN, dref_FlightControls.pitchTrimDown)
 			set_button_assignment(POV_LEFT, dref_LRStandard.glanceLeft)
 			set_button_assignment(POV_RIGHT, dref_LRStandard.glanceRight)
-			set_button_assignment(POV_CENTER, dref_HUD.PullDown)
+			set_button_assignment(POV_CENTER, NoCommand)
 			--set_button_assignment(THUMBSTICK_CLK,"sim/flight_controls/brakes_toggle_regular")
 
         end 
