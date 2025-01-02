@@ -13,7 +13,7 @@ X-Plane 12 FlyWithLua Script for Multifunction Yawman Arrow Controls
 
 # Requirements
 * [X-Plane 12](https://www.x-plane.com/) only
-* [Toliss A340-600](https://toliss.com/pages/a340-600)
+* [Toliss A330-900](https://toliss.com/pages/a330-900)
 * [FlyWithLua 2.8 for X-Plane 12](https://forums.x-plane.org/index.php?/files/file/82888-flywithlua-ng-next-generation-plus-edition-for-x-plane-12-win-lin-mac/)
 * [Yawman Arrow Controller](https://yawmanflight.com/)
 
