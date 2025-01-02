@@ -1,7 +1,7 @@
 --[[
  Toliss A339 mapping for the Yawman Arrow By Ryan Mikulovsky, CC0 1.0. 
  
- Initial commit: 2024-12-22
+ Initial commit: 2025-1-2
  
  Inspired by Yawman's mapping for the MSFS PMDG 777.
  Thanks for Thomas Nield for suggesting looking into Lua for better controller support in XP12. Button numbers and their variable names came from Thomas.
@@ -33,6 +33,12 @@ local dref_APAirSpeedUp = "sim/autopilot/airspeed_up"
 local dref_APAirSpeedDown = "sim/autopilot/airspeed_down"
 
 local dref_FlightDirector1 = "toliss_airbus/fd1_push"
+
+local dref_HUD = {
+	PullDown = "AirbusFBW/PullHUD1Down",
+	Stow = "AirbusFBW/StowHUD1",
+	Status = "sim/cockpit2/electrical/HUD_brightness_ratio"
+}
 
 local dref_APAdjust = {
 	AltUp = "sim/autopilot/altitude_up",
@@ -165,7 +171,7 @@ function multipressTolissA339_buttons()
 			set_button_assignment(POV_DOWN, dref_FlightControls.pitchTrimDown)
 			set_button_assignment(POV_LEFT, dref_LRStandard.glanceLeft)
 			set_button_assignment(POV_RIGHT, dref_LRStandard.glanceRight)
-			set_button_assignment(POV_CENTER, NoCommand)
+			set_button_assignment(POV_CENTER, dref_HUD.PullDown)
 			--set_button_assignment(THUMBSTICK_CLK,"sim/flight_controls/brakes_toggle_regular")
 
         end 
@@ -184,6 +190,7 @@ function multipressTolissA339_buttons()
 		
 		pov_up_pressed = button(POV_UP)
 		pov_down_pressed = button(POV_DOWN)
+		pov_center_pressed = button(POV_CENTER)
 		
 		dpad_up_pressed = button(DPAD_UP)
 		dpad_center_pressed = button(DPAD_CENTER)
@@ -195,6 +202,16 @@ function multipressTolissA339_buttons()
 		wheel_down_pressed = button(WHEEL_DOWN)
 		
 -- Start expanded control logic
+
+		if pov_center_pressed then
+			-- HUD
+			DataRef("HUD_Status",dref_HUD.Status ,"readonly")
+			if HUD_Status == 0.0 then
+				command_once(dref_HUD.PullDown)
+			else
+				command_once(dref_HUD.Stow)
+			end
+		end
 
 		if dpad_center_pressed and not sp6_pressed and not DPAD_PRESSED then
 			if not CHASE_VIEW then
