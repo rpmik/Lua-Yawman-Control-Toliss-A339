@@ -37,7 +37,8 @@ Some Yawman documentation refer to these as MF 1L (SP1), MF 1C (SP2), MF 1R (SP3
 # Assignments
 
 The following assignments are not completely documented at this time. It's best to review the script for assignments until the coder gets his house in order.
-
+* A339 Special functions
+  	 * POV Center click = HUD Toggle
 * DPAD Left = Zoom Out
 * DPAD Right = Zoom In
 * DPAD Center = Chase or Aircraft's Default View
