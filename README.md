@@ -3,6 +3,7 @@ Multifunction buttons on the Yawman Arrow Controller for the Toliss A330-900 Neo
 
 X-Plane 12 FlyWithLua Script for Multifunction Yawman Arrow Controls
 * [Full and Most Up To Date List](https://www.distortions.net/yawman-arrow-controller-xplane/#:~:text=All%20the%20Scripts%20(Github%20Downloads)) (at distortions.net)
+* Also see [the script for the Lamainar A330-300](https://github.com/rpmik/Lua-Yawman-Control-LR-A333)
 * Also see [the script for the Toliss A340-600](https://github.com/rpmik/Lua-Yawman-Control-Toliss-A346/)
 * Also see [the script for the Toliss A321 and A321 Neo (A21N)](https://github.com/rpmik/Lua-Yawman-Control-Toliss-A321x/)
 * Also see [the script for the Toliss A320](https://github.com/rpmik/Lua-Yawman-Control-Toliss-A20N/)
